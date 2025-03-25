@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> <!-- Optional styling -->
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to the Home Page!</h1>
+    <p>You are successfully logged in.</p>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</div>
+</body>
+</html>

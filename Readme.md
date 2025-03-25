@@ -1,9 +1,9 @@
 # Spring Security Application
-This is a Spring Boot application demonstrating how to configure custom security settings with Spring Security, including custom user authentication and login functionality. The project uses a custom UserDetailsService for user authentication and integrates Spring Security to secure endpoints.
+This is a Spring Boot application showcasing how to configure custom security settings with Spring Security, including custom user authentication and login functionality. The project uses a custom UserDetailsService for user authentication.
 
 Project Structure
-SpringSecurityApplication: The main entry point of the Spring Boot application, which starts the Spring context.
-SecurityConfig: A configuration class responsible for customizing Spring Security, including authentication, authorization, session management, and login configuration.
+SpringSecurityApplication: The main entry point of the Spring Boot application.
+SecurityConfig: A configuration class responsible for customizing Spring Security, including authentication, authorization, session management, and login configuration with custom filterchain.
 MyUserDetailsService: A custom implementation of UserDetailsService to load user-specific details during authentication.
 UserPrincipal: A model that implements UserDetails to represent authenticated user data.
 Users: The model class representing a user in the database.
@@ -24,7 +24,7 @@ Spring Data JPA (for handling users and authentication data)
 
 Security Configuration
 The SecurityConfig class defines the security rules:
-CSRF Protection: Disabled (suitable for non-browser clients or API requests).
+CSRF Protection: Disabled.
 Custom Login Page: /login is set as the custom login page, and a successful login redirects to /.
 Session Management: Configured to create a session only if required.
 Public URLs: /register, /login, and /logout are publicly accessible.
